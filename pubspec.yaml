@@ -74,10 +74,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Black_Ops_One
+      fonts:
+        - asset: fonts/BlackOpsOne-Regular.ttf
     - family: Bungee_Tint
       fonts:
-        - asset: fonts/Bungee_Tint.ttf
+        - asset: fonts/BungeeTint-Regular.ttf
 
-
+  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
