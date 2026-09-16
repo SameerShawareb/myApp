@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: TheApp(),
+  home: UserIDCard(),
 ));
 
-class TheApp extends StatelessWidget {
-  const TheApp({super.key});
+class UserIDCard extends StatelessWidget {
+  const UserIDCard({super.key});
 
   @override
   Widget build(BuildContext context) {
