@@ -17,18 +17,11 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.deepOrange[600],
       ),
-      body: Center(
-        child: Text(
-          'Hello world!!',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.grey[600],
-            fontFamily: 'Black_Ops_One',
-          ),
-        ),
+      body: Padding(
+          padding: EdgeInsets.all(90.0),
+          child: Text('hello'),
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.deepOrange[600],
