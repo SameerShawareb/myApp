@@ -4,8 +4,16 @@ void main() => runApp(MaterialApp(
   home: UserIDCard(),
 ));
 
-class UserIDCard extends StatelessWidget {
+class UserIDCard extends StatefulWidget {
   const UserIDCard({super.key});
+
+  @override
+  State<UserIDCard> createState() => _UserIDCardState();
+}
+
+class _UserIDCardState extends State<UserIDCard> {
+
+  int level = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +24,15 @@ class UserIDCard extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.cyan[900],
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          setState(() {
+            level += 1;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[800],
       ),
       body: Padding(
           padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -57,7 +74,7 @@ class UserIDCard extends StatelessWidget {
                 ),
               ),
               Text(
-                '8',
+                '$level',
                 style: TextStyle(
                   color: Colors.amberAccent[200],
                   letterSpacing: 2.0,
@@ -91,3 +108,4 @@ class UserIDCard extends StatelessWidget {
     );
   }
 }
+
