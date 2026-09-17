@@ -13,7 +13,7 @@ class UserIDCard extends StatefulWidget {
 
 class _UserIDCardState extends State<UserIDCard> {
 
-  int level = 0;
+  int _level = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +28,12 @@ class _UserIDCardState extends State<UserIDCard> {
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           setState(() {
-            level += 1;
+            _level += 1;
           });
         },
-        child: Icon(Icons.add),
+        foregroundColor: Colors.white,
         backgroundColor: Colors.grey[800],
+        child: Icon(Icons.add),
       ),
       body: Padding(
           padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -74,7 +75,7 @@ class _UserIDCardState extends State<UserIDCard> {
                 ),
               ),
               Text(
-                '$level',
+                '$_level',
                 style: TextStyle(
                   color: Colors.amberAccent[200],
                   letterSpacing: 2.0,
